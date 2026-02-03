@@ -95,6 +95,8 @@ function AudioPlayer() {
         }));
 
         audioRef.current.play().catch(handlePlayAbortError);
+      } else {
+        handleNextButtonClick();
       }
     } else {
       audioRef.current.pause();
