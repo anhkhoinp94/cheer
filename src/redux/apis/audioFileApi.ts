@@ -8,7 +8,7 @@ import appApi from "./appApi";
 const audioFileApi = appApi.injectEndpoints({
   endpoints: (builder) => ({
     getAudioFiles: builder.query<AudioFile[], void>({
-      query: () => "js/filesList.json",
+      query: () => "js/filesList-cheer.json",
       transformResponse: (data: AudioFileData[]) => {
         return data.map<AudioFile>((d) => ({
           ...d,
